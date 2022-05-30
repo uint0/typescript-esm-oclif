@@ -1,0 +1,38 @@
+{
+  "name": "typescript-esm-oclif",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@oclif/core": "^1.9.0",
+    "@oclif/plugin-help": "^5.1.12",
+    "@types/node": "^17.0.36",
+    "chalk": "^5.0.1",
+    "typescript": "^4.7.2"
+  },
+  "devDependencies": {
+    "@oclif/plugin-plugins": "^2.1.0",
+    "ts-node": "^10.8.0"
+  },
+  "files": [
+    "/bin",
+    "/dist"
+  ],
+  "oclif": {
+    "bin": "oex",
+    "dirname": "oex",
+    "commands": "./dist/commands",
+    "plugins": [],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -b",
+    "dev": "./bin/dev.js"
+  }
+}
